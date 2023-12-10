@@ -1,12 +1,12 @@
 const products = [
     {
         id: 1,
-        name: "Organic Cabbage",
+        name: "Organic Cauliflower",
         prevPrice: 65.00,
         currentPrice: 50.00,
         stars: 4,
         discount: "-27%",
-        type: "vegitable",
+        type: "vegetable",
         image: "/images/all-products/veg2.png"
     },
     {
@@ -16,7 +16,7 @@ const products = [
         currentPrice: 50.00,
         stars: 4,
         discount: "-27%",
-        type: "vegitable",
+        type: "vegetable",
         image: "/images/all-products/veg3.png"
     },
     {
@@ -26,7 +26,7 @@ const products = [
         currentPrice: 50.00,
         stars: 4,
         discount: "-27%",
-        type: "vegitable",
+        type: "vegetable",
         image: "/images/all-products/veg4.png"
     },
     {
@@ -36,7 +36,7 @@ const products = [
         currentPrice: 50.00,
         stars: 4,
         discount: "-27%",
-        type: "vegitable",
+        type: "vegetable",
         image: "/images/all-products/veg5.png"
     },
     {
@@ -46,7 +46,7 @@ const products = [
         currentPrice: 50.00,
         stars: 4,
         discount: "-27%",
-        type: "vegitable",
+        type: "vegetable",
         image: "/images/all-products/veg6.png"
     },
     {
@@ -56,7 +56,7 @@ const products = [
         currentPrice: 50.00,
         stars: 4,
         discount: "-27%",
-        type: "vegitable",
+        type: "vegetable",
         image: "/images/all-products/veg.png"
     },
     {

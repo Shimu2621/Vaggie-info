@@ -3,12 +3,13 @@ import React from 'react'
 const Product = () => {
   return (
     <div className='product'>
-        <div className='product-wrapper container'>
+        <div className='product-wrapper-container'>
             <div className='wrapper-btn'>
-              <p className='secondary-btn mt-10'>View More &rarr;</p>
-            </div>
-            <h6>&#9900; &#9900; &#9900; FRESH FROM OUR FARM</h6>
-            <h2>Good Organic Products</h2>
+                <button className='secondary-btn mt-10'>View More &rarr;</button>
+              </div>
+              <h6>&#9900; &#9900; &#9900; FRESH FROM OUR FARM</h6>
+              <h2>Good Organic Products</h2>
+           
         </div>
 
         <div className='product-details'>

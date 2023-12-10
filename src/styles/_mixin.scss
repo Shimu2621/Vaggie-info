@@ -49,6 +49,12 @@
     }
 }
 
+@mixin xxlMaxBreakPoint {
+    @media (max-width: #{$screen-xxl}) {
+        @content;
+    }
+}
+
 @mixin customMinBreakPoint($size) {
     @media (min-width: #{$size}px) {
         @content;

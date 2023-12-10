@@ -1,127 +1,59 @@
-import React from 'react'
-import data from "../staticData/product"
+import React, { useState } from 'react'
+import products from '../staticData/product'
+
 
 const Organic = () => {
+    const [productsList, setProductsList] = useState(products)
+    const [productItems, setProductItems] = useState(productsList)
+
+    const handleFilters = (type) => {
+        const items = productsList.filter(item => item.type === type)
+        setProductItems(items)
+    }
     
   return (
     <div className='organic'>
         <div className='organic-wrapper container'>
-            <div className='right'>
-                <h6>&#9900; &#9900; &#9900; FRESH FROM OUR FARM</h6>
-                <h2>Good Organic Products</h2>
-            </div>
-            <div className='left'>
-                <h5>All </h5>
-                <p>Vegetables</p>
-                <p>Fruits</p>
-            </div>
-
-            <div className='veg-details'>
-                <div className='veg-img'>
-                    <img src="/images/all-products/veg.png" alt="veg-img" />
+            <div className='flex'>  
+                <div className='heading-left'>
+                    <h6 className='secondary-text'>&#9900; &#9900; &#9900; FRESH FROM OUR FARM</h6>
+                    <h2 className='label'>Good Organic Products</h2>
                 </div>
+                <div className='heading-right'>
+                    <button className='active-btn'>All</button>
 
-                <div className='veg-info'>
-                    <div className='text'>
-                        <div>MEATS<span className='disc'>-27%</span></div>
-                    </div>
+                    <button onClick={() => handleFilters("vegetable")} className='active-btn'>Vagetables</button>
 
-                    <div className='veg-others'>
-                        <h6> &#9733;  &#9733;  &#9733;  &#9733; &#9734;</h6>
-                        <h4>Organic Corn</h4>
-                        <div className='price'>$50.00<span className='pre-price'>$65.00</span></div>
-                    </div>
+                    <button onClick={() => handleFilters("fruit")} className='active-btn'>Fruits</button>
                 </div>
             </div>
 
-            <div className='veg-details'>
-                <div className='veg-img'>
-                    <img src="/images/all-products/veg2.png" alt="veg-img" />
-                </div>
+            <div className='organic-wrapper-container'>
+                {
+                    productItems?.map((item, i) =>
+                        <div className='veg-details' key={i}>
+                            <div className='veg-img'>
+                                <img src={item?.image} alt={item?.title} />
+                            </div>
 
-                <div className='veg-info'>
-                    <div className='text'>
-                        <div>MEATS<span className='disc'>-27%</span></div>
-                    </div>
+                            <div className='veg-info'>
+                                <div className='text'>
+                                    <div>MEATS<span className='disc'>{item?.discount}</span></div>
+                                </div>
 
-                    <div className='veg-others'>
-                        <h6> &#9733;  &#9733;  &#9733;  &#9733; &#9734;</h6>
-                        <h4>Organic Cauliflower</h4>
-                        <div className='price'>$50.00<span className='pre-price'>$65.00</span></div>
-                    </div>
-                </div>
+                                <div className='veg-others'>
+                                    <h6> &#9733;  &#9733;  &#9733;  &#9733; &#9734;</h6>
+                                    <h4>{item?.name}</h4>
+                                    <div className='price'>${item?.currentPrice}<span className='pre-price'>${item?.prevPrice}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
             </div>
 
-            <div className='veg-details'>
-                <div className='veg-img'>
-                    <img src="/images/all-products/veg3.png" alt="veg-img" />
-                </div>
-
-                <div className='veg-info'>
-                    <div className='text'>
-                        <div>MEATS<span className='disc'>-27%</span></div>
-                    </div>
-
-                    <div className='veg-others'>
-                        <h6> &#9733;  &#9733;  &#9733;  &#9733; &#9734;</h6>
-                        <h4>Organic Mushroom</h4>
-                        <div className='price'>$50.00<span className='pre-price'>$65.00</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div className='veg-details'>
-                <div className='veg-img'>
-                    <img src="/images/all-products/veg5.png" alt="veg-img" />
-                </div>
-
-                <div className='veg-info'>
-                    <div className='text'>
-                        <div>MEATS<span className='disc'>-27%</span></div>
-                    </div>
-
-                    <div className='veg-others'>
-                        <h6> &#9733;  &#9733;  &#9733;  &#9733; &#9734;</h6>
-                        <h4>Organic Tomato</h4>
-                        <div className='price'>$50.00<span className='pre-price'>$65.00</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div className='veg-details'>
-                <div className='veg-img'>
-                    <img src="/images/all-products/veg6.png" alt="veg-img" />
-                </div>
-
-                <div className='veg-info'>
-                    <div className='text'>
-                        <div>MEATS<span className='disc'>-27%</span></div>
-                    </div>
-
-                    <div className='veg-others'>
-                        <h6> &#9733;  &#9733;  &#9733;  &#9733; &#9734;</h6>
-                        <h4>Organic Capsicum</h4>
-                        <div className='price'>$50.00<span className='pre-price'>$65.00</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div className='veg-details'>
-                <div className='veg-img'>
-                    <img src="/images/all-products/veg8.png" alt="veg-img" />
-                </div>
-
-                <div className='veg-info'>
-                    <div className='text'>
-                        <div>MEATS<span className='disc'>-27%</span></div>
-                    </div>
-
-                    <div className='veg-others'>
-                        <h6> &#9733;  &#9733;  &#9733;  &#9733; &#9734;</h6>
-                        <h4>Organic Broccoli</h4>
-                        <div className='price'>$50.00<span className='pre-price'>$65.00</span></div>
-                    </div>
-                </div>
+            <div className='button flex mt-20 cursor-pointer'>
+                <button className='primary-btn'>Subscribe &rarr;</button>
             </div>
         </div>
     </div>

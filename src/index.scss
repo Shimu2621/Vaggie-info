@@ -30,6 +30,7 @@ body {
 
 .label {
     font-weight: 600;
+    font-size: 30px;
 }
 
 .label-required .required-field {
@@ -104,8 +105,16 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 360px;
+    margin-right: 40px;
+}
+
 .primary-btn {
-    padding: 15px 22px;
+    padding: 20px 40px;
     background-color: $secondaryColor;
     border-radius: 25px;
     color: $whiteColor;
@@ -120,6 +129,16 @@ body {
     border-radius: 25px;
     color: $whiteColor;
     width: 150px;
+    border: 1px solid $whiteColor;
+    cursor: pointer;
+}
+
+.active-btn {
+    padding: 5px 5px;
+    background-color: $secondaryColor;
+    border-radius: 25px;
+    color: $whiteColor;
+    width: 100px;
     border: 1px solid $whiteColor;
     cursor: pointer;
 }

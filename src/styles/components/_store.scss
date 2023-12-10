@@ -1,0 +1,93 @@
+    .store {
+       padding: 30px;
+       
+       .store-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: relative;
+       }
+
+       .img-wrapper {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        position: relative;
+        
+    }
+    .img-container {
+        background-color: white;
+        border-radius: 10px;
+        border-top-right-radius: 40px;
+        height: 50%;
+        margin: 10px;
+        padding-left: 10px;
+        position: relative;
+        
+        .year {
+            position: absolute;
+            font-size: 10px;
+            background-color: $secondaryColor;
+            border-radius: 20px;
+            // width: 90px;
+            padding: 5px;
+            margin: 10px;
+            color: whitesmoke;
+
+        }
+        img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px; 
+            border-bottom-right-radius: 0; 
+            border-bottom-left-radius: 0; 
+            margin: 5px;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+            object-fit: cover; 
+        }
+        h6 {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+        }
+    }
+    
+    
+    .food-container {
+        // height: 100vh;
+
+        .food-wrapper h6 {
+            color: $secondaryColor;
+            font-size: 8px;
+            margin-bottom: 15px;
+        }
+        .title {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .food-icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+
+            .icon {
+                color: $secondaryColor;
+                display: flex;
+                align-items: center;
+            }
+            span {
+                color: black;
+                margin: 10px;
+                font-size: 12px;
+            }
+            .img-info img{
+                width: 60%;
+                // float: left;
+                                
+            }
+        }
+    }
+
+}
+
