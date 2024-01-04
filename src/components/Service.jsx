@@ -1,38 +1,48 @@
-import React from 'react'
+const services = [
+    {
+        id: 1,
+        image: "/images/service-icon/payment.png",
+        policy: "Payment",
+        title: "Secure System"
+    },
+    {
+        id: 2,
+        image: "/images/service-icon/delivery.png",
+        policy: "Free Delivery",
+        title: "from $50"
+    },
+    {
+        id: 3,
+        image: "/images/service-icon/days.png",
+        policy: "365 Days",
+        title: "For free return"
+    },
+    {
+        id: 4,
+        image: "/images/service-icon/customer.png",
+        policy: "99% Customer",
+        title: "Feedbacks"
+    },
+    {
+        id: 5,
+        image: "/images/service-icon/best.png",
+        policy: "Only Best",
+        title: "Brands"
+    },
+]
 
 const Service = () => {
   return (
     <div className='service'>
         <div className='service-wrapper container'>
-            <div className='service-icon'>
-                <img src="/images/service-icon/payment.png" alt="service-icon" />
-                <h5>Payment</h5>
-                <h5>secure System</h5>
-            </div>
-
-            <div className='service-icon'>
-                <img src="/images/service-icon/delivery.png" alt="service-icon" />
-                <h5>Free Delivery</h5>
-                <h5>from $50</h5>
-            </div>
-
-            <div className='service-icon'>
-                <img src="/images/service-icon/days.png" alt="service-icon" />
-                <h5>365 Days</h5>
-                <h5>For free return</h5>
-            </div>
-
-            <div className='service-icon'>
-                <img src="/images/service-icon/customer.png" alt="service-icon" />
-                <h5>99% Customer</h5>
-                <h5>Feedbacks</h5>
-            </div>
-
-            <div className='service-icon'>
-                <img src="/images/service-icon/best.png" alt="service-icon" />
-                <h5>Only Best</h5>
-                <h5>Brands</h5>
-            </div>
+            {
+                services?.map(item => <div key={item?.id} className='service-icon'>
+                <img src={item?.image} alt="service-icon" />
+                <h5>{item?.policy}</h5>
+                <h5>{item?.title}</h5>
+            </div>)
+            }
+            
         </div>
     </div>
 )

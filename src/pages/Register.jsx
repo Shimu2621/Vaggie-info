@@ -6,6 +6,7 @@ import { TiSocialFacebook  } from "react-icons/ti";
 import {  BiLogoGoogle } from "react-icons/bi";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
+import Navbar from '../components/Navbar';
 
 
 const Register = () => {
@@ -50,7 +51,11 @@ const Register = () => {
            console.log(error);
          }
       }
+
+  //--->After return I use fragment tag and Navbar component to show navbar on top of the this page in the browser----->    
   return (
+    <>
+    <Navbar></Navbar>
     <div className='register'>
         <h2>Logdy</h2>
         <div className='register-form-container'>
@@ -86,7 +91,7 @@ const Register = () => {
                     </div>
                     <div className='form-group'>
                         <input
-                        type="text" 
+                        type="email" 
                         placeholder="Email Address"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -95,7 +100,7 @@ const Register = () => {
                     </div>
                     <div className='form-group'>
                         <input 
-                        type="text" 
+                        type="password" 
                         placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -124,6 +129,7 @@ const Register = () => {
         </div>
         
     </div>
+    </>
   )
 }
 

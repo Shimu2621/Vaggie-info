@@ -4,6 +4,8 @@
     .service-wrapper {
         display: flex;
         justify-content: space-evenly;
+        gap: 15px;
+        flex-wrap: wrap;
         text-align: center;
         padding: 5px 3px;
 

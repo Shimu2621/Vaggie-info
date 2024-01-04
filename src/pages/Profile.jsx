@@ -4,7 +4,7 @@ import '../styles/components/_profile.scss'
 
 const Profile = () => {
     const [token, setToken] = useState(localStorage.getItem('myToken'));
-    const [userData, setUserData] = useState('');
+    const [userData, setUserData] = useState(null);
 
   console.log('token', token);
 

@@ -8,10 +8,21 @@
     
 
     .navbar-wrapper {
+
+        @include smMaxBreakPoint {
+            flex-direction: column; 
+        }
         .navbar-details{
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+
+            @include smMaxBreakPoint {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 5px; 
+            }
 
             .nav-btn {
                 background-color: $secondaryColor;
@@ -24,6 +35,15 @@
                 .nav-span {
                     margin: 8px;
                 }
+
+                @include smMaxBreakPoint {
+                    flex-direction: column;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 5px;
+                    padding: 2px;
+                    margin-top: 2px; 
+                }
             }
             .home {
                 color: $secondaryColor;
@@ -33,6 +53,10 @@
                 display: flex;
                 align-items: center;
                 gap: 5px;
+
+                @include smMaxBreakPoint {
+                    flex-direction: column;
+                }
 
                 .icon {
                     border-radius: 50%;
@@ -47,6 +71,46 @@
                 }
 
             }
+            .signin-btn {
+                background-color: black;
+                border-radius: 20px;
+                color: white;
+                border: 2px solid $secondaryColor;
+                padding: 8px;
+                margin: 4px;
+                cursor: pointer;
+
+                @include mdMaxBreakPoint {
+                    flex-direction: column;
+                    font-size: 6px; 
+                }
+            }
+
+            .signin-btn:hover {
+                background-color: $secondaryColor;
+            }
+
+            .signup-btn {
+                background-color: $secondaryColor;
+                border-radius: 20px;
+                color: white;
+                border: 2px solid $secondaryColor;
+                padding: 8px;
+                margin: 4px;
+                cursor: pointer;
+
+                @include mdMaxBreakPoint {
+                    flex-direction: column;
+                    font-size: 6px; 
+                }
+            }
+
+            @include smMaxBreakPoint {
+                flex-direction: column;
+                font-size: 4px; 
+            }
+            
+
             
         }
         

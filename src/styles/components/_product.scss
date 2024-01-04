@@ -1,11 +1,11 @@
 .product {
-    // margin-left: 220px;
-    padding: 10px;
+    padding: 50px;
 
     .product-wrapper-container {
-        display: grid;
-        grid-template-columns: repeat(2 1fr);
-        justify-content: center;
+        display: flex;
+        // grid-template-columns: repeat(2 1fr);
+        justify-content: space-between;
+        align-items: center;
         
         h6 {
             color: $secondaryColor;
@@ -14,22 +14,34 @@
         h2 {
             font-size: 30px;
             font-weight: 600;
+
+            @include smMaxBreakPoint {
+                font-size: 20px;
+            }
         }
 
-        .wrapper-btn {
-            margin-left: 870px;
-            height: 40px;
-            margin-top: 40px;
-            padding: 10px;
+        .wrapper-btn button {
+            // padding: 10px;
 
+            @include smMaxBreakPoint {
+                font-size: 8px;
+                padding: 8px;
+            }
         }
     }
     .product-details {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+        @include mdMaxBreakPoint {
+            grid-template-columns: repeat(2, 1fr);
+            font-size: 10px;
+        }
 
+        @include smMaxBreakPoint {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
         .product-info {
             border: none;
             background-color: rgb(243, 246, 246);
@@ -45,11 +57,20 @@
             h4 {
                 color:  rgb(58, 57, 57);
                 font-size: 20px;
+
+                @include smMaxBreakPoint {
+                    font-size: 12px;
+
+                }
             }
 
             p {
                 color: $secondaryColor;
                 font-size: 17px;
+
+                @include smMaxBreakPoint {
+                    font-size: 10px;
+                }
             }
             h6 {
                 color: rgb(232, 96, 96);
@@ -63,6 +84,10 @@
                 padding: 5px;
                 font-size: 10px;
                 margin-bottom: 15px;
+
+                @include smMaxBreakPoint {
+                    font-size: 8px;
+                }
             }
 
             img {
@@ -76,6 +101,11 @@
                 margin-right: 10px;
                 max-width: 0 auto;
                 object-fit: contain;
+
+                @include smMaxBreakPoint {
+                    height: 150px;
+                    width: 140px;
+                }
                 
             }
         }

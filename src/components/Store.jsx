@@ -1,67 +1,101 @@
-import React from 'react'
-import { FaTag } from "react-icons/fa6";
-
+import React from 'react';
+import { FaTag } from 'react-icons/fa6';
+import { GoClock } from "react-icons/go";
 
 const Store = () => {
   return (
-    
-    <div className='store'>
-      <div className='store-wrapper container'>
-        <div className='img-wrapper'>
-          <div className='img-container'>
-            <h5 className='year'>20 February 2023</h5>
-            <img width='200px' height='200px' className='store-img' src="/images/food-store/store-1.png" alt="store-img" />
-            <h6>Strategy for Norway's Peion <br /> Fund Global.</h6>
+    <div className='store-container container'>
+      <div className='wrapper'>
+        <div className="left">
+          <div className='top'>
+            <div className='box first-box'>
+              <div className='date-sec'>
+                <p><GoClock />20 February, 2021</p>
+              </div>
+              <div className='title'>
+                <h4>Strategy for Norway's Peion Fun Global</h4>
+              </div>
+            </div>
+
+            <div className='box second-box'>
+              <div className="date-sec">
+                <p><GoClock />20 February, 2021</p>
+              </div>
+              <div className='title'>
+                <h4>Strategy for Norway's Peion Fun Global</h4>
+              </div>
+            </div>
           </div>
 
-          <div className='img-container'>
-            <h5 className='year'>20 February 2023</h5>
-            <img width='200px' height='200px' className='store-img' src="/images/food-store/store-2.png" alt="store-img" />
-            <h6>Strategy for Norway's Peion <br /> Fund Global.</h6>
+          <div className='bottom'>
+            <div className='box first-box'>
+              <div className="date-sec">
+                <p><GoClock /> 20 February, 2021</p>
+              </div>
+              <div className='title'>
+                <h4>Strategy for Norway's Peion Fun Global</h4>
+              </div>
+            </div>
+
+            <div className='box second-box'>
+              <div className="date-sec">
+                <p><GoClock />20 February, 2021</p>
+              </div>
+              <div className='title'>
+                <h4>Strategy for Norway's Peion Fun Global</h4>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className='img-wrapper'>
-          <div className='img-container'>
-            <h5 className='year'>20 February 2023</h5>
-            <img width='200px' height='200px' className='store-img' src="/images/food-store/store-3.png" alt="store-img" />
-            <h6>Strategy for Norway's Peion <br /> Fund Global.</h6>
-          </div>
-
-          <div className='img-container'>
-            <h5 className='year'>20 February 2023</h5>
-            <img width='200px' height='200px' className='store-img' src="/images/food-store/store-4.png" alt="store-img" />
-            <h6>Strategy for Norway's Peion <br /> Fund Global.</h6>
-          </div>
-        </div>
-
-        <div className='food-container'>
-          <div className='food-wrapper'>
-            <h6>&#9900; &#9900; &#9900; FRESH FROM OUR FARM</h6>
-            <h1 className='title'>Trusted Organic Food <br /> Store Conscious</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br /> Quisquam dolorum nemo soluta ad inventore porromo <br /> ducimus quam possimus veritatis optio.</p>
-          </div>
-
-          <div className='food-icon-container'>
+        <div className="right">
+          <small>&#9900; &#9900; &#9900; Fresh From Our Farm</small>
+          <h1 className="main-heading">Trusted Organic Food <br /> Store Conscious</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorem nisi laudantium officiis dolore quod odit esse. Maxime amet officia, ut doloremque harum dignissimos libero !</p>
+          <div className="list-sections container">
             <div className='icon-list'>
-            <h6 className='icon'><FaTag />  <span>Fruits</span></h6>
-            <h6 className='icon'><FaTag />  <span>Vaggie</span></h6>
-            <h6 className='icon'><FaTag />  <span>Juices</span></h6>
-            <h6 className='icon'><FaTag />  <span>Dried</span></h6>
-            <h6 className='icon'><FaTag />  <span>Breads</span></h6>
+              <h6 className='icon'><FaTag />  <span>Fruits</span></h6>
+              <h6 className='icon'><FaTag />  <span>Vaggie</span></h6>
+              <h6 className='icon'><FaTag />  <span>Juices</span></h6>
+              <h6 className='icon'><FaTag />  <span>Dried</span></h6>
+              <h6 className='icon'><FaTag />  <span>Breads</span></h6>
             </div>
-            <div className='img-info'>
-              <img src="/images/food-store/fruit3.png" alt="food-img" />
+
+            {/* <ul>
+              <li className='flex align-center flex-gap-10'>
+                <span><FaTag color='#7CC000' size={16} /></span>
+                <p>Fruits</p>
+              </li>
+              <li className='flex align-center flex-gap-10'>
+                <span><FaTag color='#7CC000' size={16} /></span>
+                <p>Vegetables</p>
+              </li>
+              <li className='flex align-center flex-gap-10'>
+                <span><FaTag color='#7CC000' size={16} /></span>
+                <p>Juices</p>
+              </li>
+              <li className='flex align-center flex-gap-10'>
+                <span><FaTag color='#7CC000' size={16} /></span>
+                <p>Dried</p>
+              </li>
+              <li className='flex align-center flex-gap-10'>
+                <span><FaTag color='#7CC000' size={16} /></span>
+                <p>Breads</p>
+              </li>
+            </ul> */}
+            <div className="list-img">
+              <img className="orange-img" src='/images/food-store/fruit3.png' alt='orange image' />
             </div>
           </div>
-          <div>
-            <button className='primary-btn mt-20'>Subscribe &rarr;</button>
-          </div>
+
+          <button className='primary-btn mt-20'>Subscribe &rarr;</button>
         </div>
       </div>
-    
     </div>
-  )
-}
+  );
+};
 
-export default Store
+export default Store;
+
+
+

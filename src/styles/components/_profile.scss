@@ -3,8 +3,8 @@
     justify-content: center;
     align-items: center;
     // Use min-height to ensure the background covers the entire viewport even when the content is smaller
-    background: #fff;
-    padding: 40px;
+    background-color: white;
+    height: 50vh;
 
     .profile-form-container h2 {
         text-align: center;
@@ -17,6 +17,11 @@
         width: 380px;
         height: 250px;
         text-align: center;
+        cursor: pointer;
+    }
+
+    .profile-form-box:hover {
+        background:  linear-gradient(to right, rgb(244, 242, 242),rgb(226, 147, 147), rgb(168, 60, 60));
     }
     .form-group h3 {
         color: #655858;

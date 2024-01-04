@@ -3,16 +3,19 @@ import React from 'react'
 const Product = () => {
   return (
     <div className='product'>
-        <div className='product-wrapper-container'>
-            <div className='wrapper-btn'>
-                <button className='secondary-btn mt-10'>View More &rarr;</button>
-              </div>
+        <div className='product-wrapper-container container'>
+            <div>
               <h6>&#9900; &#9900; &#9900; FRESH FROM OUR FARM</h6>
               <h2>Good Organic Products</h2>
+            </div>
+            
+            <div className='wrapper-btn'>
+                <button className='secondary-btn mt-10'>View More &rarr;</button>
+            </div>
            
         </div>
 
-        <div className='product-details'>
+        <div className='product-details container'>
             <div className='product-info'>
                 <div className='text'>
                   <h5>MEATS</h5>
